@@ -2,8 +2,9 @@ class ConsumersController < ApplicationController
   def create
   end
 
-  def show
+  def index
     consumers = Consumer.all
+    render json: consumers
   end
 
   def edit
