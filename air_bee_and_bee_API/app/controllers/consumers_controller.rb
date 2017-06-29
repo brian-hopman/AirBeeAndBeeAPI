@@ -1,5 +1,6 @@
 class ConsumersController < ApplicationController
   def create
+    Consumer.create(consumer_params)
   end
 
   def index
@@ -14,5 +15,11 @@ class ConsumersController < ApplicationController
   end
 
   def destroy
+  end
+
+  private
+
+  def consumer_params
+    params.permit(:username)
   end
 end
