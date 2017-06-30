@@ -20,6 +20,6 @@ class ConsumersController < ApplicationController
   private
 
   def consumer_params
-    params.permit(:username)
+    params.permit(:firstName, :lastName, :email, :vendorAccount)
   end
 end

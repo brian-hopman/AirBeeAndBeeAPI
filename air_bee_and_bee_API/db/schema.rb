@@ -16,7 +16,10 @@ ActiveRecord::Schema.define(version: 20170627210247) do
   enable_extension "plpgsql"
 
   create_table "consumers", force: :cascade do |t|
-    t.string "username"
+    t.string "firstName"
+    t.string "lastName"
+    t.string "email"
+    t.boolean "vendorAccount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
