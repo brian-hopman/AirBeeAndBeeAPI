@@ -1,11 +1,17 @@
 class ConsumersController < ApplicationController
   def create
-    Consumer.create(consumer_params)
+    @consumer = Consumer.create(consumer_params)
   end
 
   def index
-    consumers = Consumer.all
-    render json: consumers
+    @consumers = Consumer.all
+    render json: @consumers
+  end
+
+  def show
+    byebug
+    @this_consumer = Consumer.find_by(params[:firstName])
+    render json: @this_consumer
   end
 
   def edit
