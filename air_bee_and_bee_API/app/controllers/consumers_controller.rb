@@ -1,6 +1,9 @@
 class ConsumersController < ApplicationController
   def create
     @consumer = Consumer.create(consumer_params)
+    render json: {
+      consumerId:@consumer.id
+    }
   end
 
   def index
@@ -9,7 +12,6 @@ class ConsumersController < ApplicationController
   end
 
   def show
-    byebug
     @this_consumer = Consumer.find_by(params[:firstName])
     render json: @this_consumer
   end

@@ -2,7 +2,7 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new
     @product.consumer_id = @consumer.id
-    @product.vendor_id = @vendor.id
+    #@product.vendor_id = Vendor 
     @product.save
   end
 
