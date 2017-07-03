@@ -1,9 +1,9 @@
 class ProductsController < ApplicationController
   def create
-    @product = Product.new
-    @product.consumer_id = @consumer.id
-    #@product.vendor_id = Vendor 
-    @product.save
+    @product = Product.create(products_params)
+    render json: {
+      productId:@product.id
+    }
   end
 
   def index
@@ -26,6 +26,6 @@ class ProductsController < ApplicationController
   private
 
   def products_params
-    params.permit(:title, consumer_id: @consumer)
+    params.permit(:title, :consumer_id, :vendor_id)
   end
 end
