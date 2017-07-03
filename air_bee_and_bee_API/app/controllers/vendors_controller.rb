@@ -1,6 +1,9 @@
 class VendorsController < ApplicationController
   def create
     @vendor = Vendor.create(vendors_params)
+    render json: {
+      vendorId:@vendor.id
+    }
   end
 
   def show
