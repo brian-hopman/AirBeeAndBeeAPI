@@ -12,6 +12,9 @@ class ProductsController < ApplicationController
   end
 
   def show
+    id = params['id']
+    @this_product = Product.where("vendor_id = ?", id)
+    render json: @this_product
   end
 
   def edit

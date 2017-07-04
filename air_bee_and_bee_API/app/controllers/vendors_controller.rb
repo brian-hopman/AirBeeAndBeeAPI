@@ -6,7 +6,14 @@ class VendorsController < ApplicationController
     }
   end
 
+  def index
+    @vendors = Vendor.all
+    render json: @vendors
+  end
+
   def show
+    @this_vendor = Vendor.find(params['id'])
+    render json: @this_vendor
   end
 
   def edit
