@@ -2,7 +2,8 @@ class ProductsController < ApplicationController
   def create
     @product = Product.create(products_params)
     render json: {
-      productId:@product.id
+      productId:@product.id,
+      productImage: @product['product_image']
     }
   end
 
@@ -29,6 +30,6 @@ class ProductsController < ApplicationController
   private
 
   def products_params
-    params.permit(:title, :consumer_id, :vendor_id)
+    params.permit(:title, :product_image, :consumer_id, :vendor_id)
   end
 end
