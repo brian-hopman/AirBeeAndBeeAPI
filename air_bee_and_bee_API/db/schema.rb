@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20170627210247) do
 
   create_table "products", force: :cascade do |t|
     t.string "title"
+    t.string "product_image"
     t.integer "consumer_id"
     t.integer "vendor_id"
     t.datetime "created_at", null: false
@@ -43,6 +44,7 @@ ActiveRecord::Schema.define(version: 20170627210247) do
 
   create_table "vendors", force: :cascade do |t|
     t.string "name"
+    t.string "apiary_image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
