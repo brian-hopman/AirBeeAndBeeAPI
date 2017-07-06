@@ -28,6 +28,6 @@ class VendorsController < ApplicationController
   private
 
   def vendors_params
-    params.permit(:name)
+    params.permit(:name, :apiary_image)
   end
 end
