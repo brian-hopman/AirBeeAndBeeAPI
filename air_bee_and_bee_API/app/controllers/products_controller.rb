@@ -15,6 +15,7 @@ class ProductsController < ApplicationController
   def show
     id = params['id']
     @this_product = Product.where("vendor_id = ?", id)
+    byebug
     render json: @this_product
   end
 
