@@ -1,9 +1,7 @@
 class ConsumersController < ApplicationController
   def create
     @consumer = Consumer.create(consumer_params)
-    render json: {
-      consumerId:@consumer.id
-    }
+    render json: @consumer
   end
 
   def index
