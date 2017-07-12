@@ -26,6 +26,10 @@ ActiveRecord::Schema.define(version: 20170627210247) do
 
   create_table "products", force: :cascade do |t|
     t.string "title"
+    t.string "tag"
+    t.integer "price"
+    t.string "tag2"
+    t.string "tag3"
     t.string "product_image"
     t.integer "consumer_id"
     t.integer "vendor_id"

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get "/products/search/:search_term/", to: 'products#search'
   resources :consumers
   resources :products
   resources :vendors
