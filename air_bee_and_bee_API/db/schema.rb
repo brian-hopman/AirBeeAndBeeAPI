@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 20170627210247) do
   create_table "vendors", force: :cascade do |t|
     t.string "name"
     t.string "apiary_image"
+    t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
