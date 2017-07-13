@@ -11,7 +11,7 @@ class ProductsController < ApplicationController
   end
 
   def search
-    @terms = Product.where('tag like ? OR tag2 like ? OR tag3 like ?', params['search_term'].capitalize, params['search_term'].capitalize, params['search_term'].capitalize)
+    @terms = Product.where('tag like ? OR tag2 like ? OR tag3 like ?', params['search_term'], params['search_term'], params['search_term'])
     render json: @terms
   end
 
